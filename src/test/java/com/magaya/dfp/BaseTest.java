@@ -1,6 +1,7 @@
 package com.magaya.dfp;
 
-import com.magaya.dfp.config.DriverConfiguration;
+import com.magaya.dfp.component.DriverConfiguration;
+import com.magaya.dfp.config.ApplicationContextConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
@@ -8,7 +9,7 @@ import org.testng.ITestContext;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 
-@ContextConfiguration(classes = DriverConfiguration.class)
+@ContextConfiguration(classes = ApplicationContextConfig.class)
 public class BaseTest  extends AbstractTestNGSpringContextTests {
 
     @Autowired

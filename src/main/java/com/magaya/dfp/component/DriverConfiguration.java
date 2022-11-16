@@ -1,5 +1,6 @@
-package com.magaya.dfp.config;
+package com.magaya.dfp.component;
 
+import com.magaya.dfp.config.ApplicationContextConfig;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -9,16 +10,14 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 
 import java.time.Duration;
 
 import static java.lang.Boolean.TRUE;
 import static org.springframework.util.ObjectUtils.isEmpty;
 
-@PropertySource("classpath:application.properties")
 @Configuration
-public class DriverConfiguration {
+public class DriverConfiguration extends ApplicationContextConfig {
 
     @Value("${baseUrl}")
     private String baseUrl;
