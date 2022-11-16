@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DfpApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(DfpApplication.class, args);
 	}
 
